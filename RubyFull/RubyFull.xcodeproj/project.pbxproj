@@ -3,20 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AE49336FD1DF7375069AEA9 /* Pods_RubyFull.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28435E0965142C3CA2E0A4C2 /* Pods_RubyFull.framework */; };
 		B316268923D00D9300BE6C96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B316268823D00D9300BE6C96 /* AppDelegate.swift */; };
 		B316268B23D00D9300BE6C96 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B316268A23D00D9300BE6C96 /* SceneDelegate.swift */; };
 		B316268D23D00D9300BE6C96 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B316268C23D00D9300BE6C96 /* ViewController.swift */; };
 		B316269023D00D9300BE6C96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B316268E23D00D9300BE6C96 /* Main.storyboard */; };
 		B316269223D00D9400BE6C96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B316269123D00D9400BE6C96 /* Assets.xcassets */; };
 		B316269523D00D9400BE6C96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B316269323D00D9400BE6C96 /* LaunchScreen.storyboard */; };
-		B3EA1F5123D3027700934629 /* APIKit in Frameworks */ = {isa = PBXBuildFile; productRef = B3EA1F5023D3027700934629 /* APIKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		28435E0965142C3CA2E0A4C2 /* Pods_RubyFull.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RubyFull.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		97ECD52162CDA3736D0186D9 /* Pods-RubyFull.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RubyFull.release.xcconfig"; path = "Target Support Files/Pods-RubyFull/Pods-RubyFull.release.xcconfig"; sourceTree = "<group>"; };
 		B316268523D00D9300BE6C96 /* RubyFull.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RubyFull.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B316268823D00D9300BE6C96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B316268A23D00D9300BE6C96 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -25,6 +27,7 @@
 		B316269123D00D9400BE6C96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B316269423D00D9400BE6C96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B316269623D00D9400BE6C96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D90B601279C3BA045F355B6E /* Pods-RubyFull.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RubyFull.debug.xcconfig"; path = "Target Support Files/Pods-RubyFull/Pods-RubyFull.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,18 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3EA1F5123D3027700934629 /* APIKit in Frameworks */,
+				0AE49336FD1DF7375069AEA9 /* Pods_RubyFull.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3BDD47C28AE808418AB3B7B7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				28435E0965142C3CA2E0A4C2 /* Pods_RubyFull.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B316267C23D00D9300BE6C96 = {
 			isa = PBXGroup;
 			children = (
 				B316268723D00D9300BE6C96 /* RubyFull */,
 				B316268623D00D9300BE6C96 /* Products */,
+				F12E3D76DE8B4A2AD722DC2C /* Pods */,
+				3BDD47C28AE808418AB3B7B7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +82,16 @@
 			path = RubyFull;
 			sourceTree = "<group>";
 		};
+		F12E3D76DE8B4A2AD722DC2C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D90B601279C3BA045F355B6E /* Pods-RubyFull.debug.xcconfig */,
+				97ECD52162CDA3736D0186D9 /* Pods-RubyFull.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -76,18 +99,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B316269923D00D9400BE6C96 /* Build configuration list for PBXNativeTarget "RubyFull" */;
 			buildPhases = (
+				871AEA6FB5C0F03739C1A5B3 /* [CP] Check Pods Manifest.lock */,
 				B316268123D00D9300BE6C96 /* Sources */,
 				B316268223D00D9300BE6C96 /* Frameworks */,
 				B316268323D00D9300BE6C96 /* Resources */,
+				BF17F87C64E4D70CEC5BF763 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = RubyFull;
-			packageProductDependencies = (
-				B3EA1F5023D3027700934629 /* APIKit */,
-			);
 			productName = RubyFull;
 			productReference = B316268523D00D9300BE6C96 /* RubyFull.app */;
 			productType = "com.apple.product-type.application";
@@ -116,9 +138,6 @@
 				Base,
 			);
 			mainGroup = B316267C23D00D9300BE6C96;
-			packageReferences = (
-				B3EA1F4F23D3027700934629 /* XCRemoteSwiftPackageReference "APIKit" */,
-			);
 			productRefGroup = B316268623D00D9300BE6C96 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		871AEA6FB5C0F03739C1A5B3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RubyFull-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF17F87C64E4D70CEC5BF763 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RubyFull/Pods-RubyFull-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RubyFull/Pods-RubyFull-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RubyFull/Pods-RubyFull-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B316268123D00D9300BE6C96 /* Sources */ = {
@@ -290,9 +351,11 @@
 		};
 		B316269A23D00D9400BE6C96 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D90B601279C3BA045F355B6E /* Pods-RubyFull.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4RBWQUR592;
 				INFOPLIST_FILE = RubyFull/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -307,9 +370,11 @@
 		};
 		B316269B23D00D9400BE6C96 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97ECD52162CDA3736D0186D9 /* Pods-RubyFull.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4RBWQUR592;
 				INFOPLIST_FILE = RubyFull/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -344,25 +409,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		B3EA1F4F23D3027700934629 /* XCRemoteSwiftPackageReference "APIKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ishkawa/APIKit.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.1.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		B3EA1F5023D3027700934629 /* APIKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B3EA1F4F23D3027700934629 /* XCRemoteSwiftPackageReference "APIKit" */;
-			productName = APIKit;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B316267D23D00D9300BE6C96 /* Project object */;
 }
