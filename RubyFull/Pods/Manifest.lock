@@ -1,20 +1,24 @@
 PODS:
   - APIKit (5.1.0)
+  - Himotoki (3.2.0)
   - IBAnimatable (6.0.0)
 
 DEPENDENCIES:
   - APIKit (~> 5.0)
+  - Himotoki (~> 3.1)
   - IBAnimatable
 
 SPEC REPOS:
   trunk:
     - APIKit
+    - Himotoki
     - IBAnimatable
 
 SPEC CHECKSUMS:
   APIKit: 9e1a4069608bf0ae5238811e6cfc26928ad4d01e
+  Himotoki: 2618fc6b939ad6d9b71c52c90fe210f54ea28167
   IBAnimatable: d49f9fee0c401b5b08d31b77256b77fb067e0e92
 
-PODFILE CHECKSUM: 65fc3681a10b744481ad5349fd58647192d8d3ef
+PODFILE CHECKSUM: 75fa5585bfa3a7d170c692997fc28d0ff0579381
 
 COCOAPODS: 1.8.4
