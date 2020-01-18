@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		B316269023D00D9300BE6C96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B316268E23D00D9300BE6C96 /* Main.storyboard */; };
 		B316269223D00D9400BE6C96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B316269123D00D9400BE6C96 /* Assets.xcassets */; };
 		B316269523D00D9400BE6C96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B316269323D00D9400BE6C96 /* LaunchScreen.storyboard */; };
+		B3EA1F5123D3027700934629 /* APIKit in Frameworks */ = {isa = PBXBuildFile; productRef = B3EA1F5023D3027700934629 /* APIKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3EA1F5123D3027700934629 /* APIKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = RubyFull;
+			packageProductDependencies = (
+				B3EA1F5023D3027700934629 /* APIKit */,
+			);
 			productName = RubyFull;
 			productReference = B316268523D00D9300BE6C96 /* RubyFull.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +116,9 @@
 				Base,
 			);
 			mainGroup = B316267C23D00D9300BE6C96;
+			packageReferences = (
+				B3EA1F4F23D3027700934629 /* XCRemoteSwiftPackageReference "APIKit" */,
+			);
 			productRefGroup = B316268623D00D9300BE6C96 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -336,6 +344,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B3EA1F4F23D3027700934629 /* XCRemoteSwiftPackageReference "APIKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ishkawa/APIKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B3EA1F5023D3027700934629 /* APIKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B3EA1F4F23D3027700934629 /* XCRemoteSwiftPackageReference "APIKit" */;
+			productName = APIKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B316267D23D00D9300BE6C96 /* Project object */;
 }
