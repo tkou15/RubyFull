@@ -16,6 +16,7 @@
 		B316269223D00D9400BE6C96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B316269123D00D9400BE6C96 /* Assets.xcassets */; };
 		B316269523D00D9400BE6C96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B316269323D00D9400BE6C96 /* LaunchScreen.storyboard */; };
 		B3F2690523D3373700D78DD0 /* ClientAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F2690423D3373700D78DD0 /* ClientAPI.swift */; };
+		B3F83F0923D35916001C9122 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F83F0823D35916001C9122 /* Validator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		B316269423D00D9400BE6C96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B316269623D00D9400BE6C96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3F2690423D3373700D78DD0 /* ClientAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientAPI.swift; sourceTree = "<group>"; };
+		B3F83F0823D35916001C9122 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		D90B601279C3BA045F355B6E /* Pods-RubyFull.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RubyFull.debug.xcconfig"; path = "Target Support Files/Pods-RubyFull/Pods-RubyFull.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,6 +80,7 @@
 				B316268823D00D9300BE6C96 /* AppDelegate.swift */,
 				B316268A23D00D9300BE6C96 /* SceneDelegate.swift */,
 				B316268C23D00D9300BE6C96 /* ViewController.swift */,
+				B3F83F0823D35916001C9122 /* Validator.swift */,
 				B3F2690423D3373700D78DD0 /* ClientAPI.swift */,
 				B30D51E423D311B600BAABDF /* Color.swift */,
 				B316268E23D00D9300BE6C96 /* Main.storyboard */,
@@ -216,6 +219,7 @@
 				B30D51E523D311B600BAABDF /* Color.swift in Sources */,
 				B316268923D00D9300BE6C96 /* AppDelegate.swift in Sources */,
 				B3F2690523D3373700D78DD0 /* ClientAPI.swift in Sources */,
+				B3F83F0923D35916001C9122 /* Validator.swift in Sources */,
 				B316268B23D00D9300BE6C96 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
