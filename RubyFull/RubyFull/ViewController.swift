@@ -20,6 +20,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var resultStackView: UIStackView!
     
+    var alertController: UIAlertController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -33,15 +35,26 @@ class ViewController: UIViewController {
     @IBAction func action(_ sender: Any) {
         
         guard let inputString = self.inputTextField.text else { return }
-        let request = HiraganaRequest(inputString: inputString)
+        let status = KanjiValidator.validate(inputString) { $0
+            .isNotEmpty()
+            .hasKanji()
+        }
         
-        Session.send(request) { result in
-            switch result {
-            case .success(let response):
-                self.displaySuccess(response)
-            case .failure(let error):
-                print(error)
+        switch status {
+        case .valid:
+            let request = HiraganaRequest(inputString: inputString)
+            Session.send(request) { result in
+                switch result {
+                case .success(let response):
+                    self.displaySuccess(response)
+                case .failure(let error):
+                    print(error)
+                }
             }
+        case .invalid(.hasNotKanji):
+            self.displayAlert(errorTitle: InvalidID.hasNotKanji.alertTitle)
+        case .invalid(.empty):
+            self.displayAlert(errorTitle: InvalidID.empty.alertTitle)
         }
     }
     
@@ -49,5 +62,15 @@ class ViewController: UIViewController {
         self.resultStackView.isHidden = false
         self.inputStringLabel.text = inputTextField.text
         self.hiraganaLabel.text = response.hiragana
+    }
+    
+    private func displayAlert(errorTitle: String){
+        alertController = UIAlertController(title: errorTitle,
+                                   message: nil,
+                                   preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK",
+                                       style: .default,
+                                       handler: nil))
+        present(alertController, animated: true)
     }
 }
