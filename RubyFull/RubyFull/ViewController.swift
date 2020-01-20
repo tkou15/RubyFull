@@ -18,17 +18,23 @@ class ViewController: UIViewController {
     @IBOutlet weak var inputStringLabel: UILabel!
     @IBOutlet weak var hiraganaLabel: UILabel!
     @IBOutlet weak var resultStackView: UIStackView!
+    @IBOutlet weak var inidicator: AnimatableActivityIndicatorView!
     
     var alertController: UIAlertController!
     
     private var inputString = ""
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+
         self.view.backgroundColor = UIColor.mainColor
         self.resultStackView.isHidden = true
+        
+        // インジケーターのs初期化
+        self.inidicator.animationType = .ballSpinFadeLoader
+        self.inidicator.stopAnimating()
         
         cardView.animate(.slideFade(way: .in, direction: .up), duration: 1, damping: 1, velocity: 2, force: 1)
     }
@@ -39,6 +45,7 @@ class ViewController: UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
         self.view.endEditing(true)
     }
     
@@ -58,12 +65,15 @@ class ViewController: UIViewController {
         switch status {
         case .valid: //
             let request = HiraganaRequest(inputString: inputString)
+            self.inidicator.startAnimating()
             Session.send(request) { result in
                 switch result {
                 case .success(let response):
                     self.displaySuccess(hiragana: response.hiragana)
+                    self.inidicator.stopAnimating()
                 case .failure(let error):
                     print(error)
+                    self.inidicator.stopAnimating()
                 }
             }
         case .invalid(.hasNotKanji): // 漢字を含んでいなかったら
