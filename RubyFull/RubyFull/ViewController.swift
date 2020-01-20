@@ -108,7 +108,7 @@ class ViewController: UIViewController {
         guard let duration = notification?.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? TimeInterval else { return }
         UIView.animate(withDuration: duration) {
             let transform = CGAffineTransform(translationX: 0, y: -(self.cardView.frame.height / 2))
-            self.view.transform = transform
+            self.cardView.transform = transform
         }
     }
     
@@ -116,7 +116,7 @@ class ViewController: UIViewController {
     @objc func keyboardWillHide(_ notification: Notification?) {
         guard let duration = notification?.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? TimeInterval else { return }
         UIView.animate(withDuration: duration) {
-            self.view.transform = CGAffineTransform.identity
+            self.cardView.transform = CGAffineTransform.identity
         }
     }
 }
