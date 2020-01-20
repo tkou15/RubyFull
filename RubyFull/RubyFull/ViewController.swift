@@ -13,6 +13,7 @@ import APIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var cardView: AnimatableView!
     @IBOutlet weak var inputTextField: AnimatableTextField!
     @IBOutlet weak var inputStringLabel: UILabel!
@@ -77,9 +78,9 @@ class ViewController: UIViewController {
                 }
             }
         case .invalid(.hasNotKanji): // 漢字を含んでいなかったら
-            self.displayAlert(errorTitle: InvalidID.hasNotKanji.alertTitle)
+            self.displayError(errorTitle: InvalidID.hasNotKanji.errorTitle)
         case .invalid(.empty): // 文字列が空だったら
-            self.displayAlert(errorTitle: InvalidID.empty.alertTitle)
+            self.displayError(errorTitle: InvalidID.empty.errorTitle)
         }
     }
     
@@ -88,18 +89,19 @@ class ViewController: UIViewController {
     /// 変換後のひらがなを表示する
     /// - Parameter response: 変換後のひらがな
     private func displaySuccess(hiragana: String){
+        self.titleLabel.text = "入力された文字にルビを振ります"
+        self.titleLabel.textColor = .label
         // 変換後の文字列を表示する
         self.resultStackView.isHidden = false
         self.inputStringLabel.text = inputTextField.text
         self.hiraganaLabel.text = hiragana
     }
     
-    private func displayAlert(errorTitle: String){
+    private func displayError(errorTitle: String){
         self.resultStackView.isHidden = true
-        
-        alertController = UIAlertController(title: errorTitle, message: nil, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        present(alertController, animated: true)
+        self.titleLabel.text = errorTitle
+        self.titleLabel.textColor = .red
+        inputTextField.animate(.shake(repeatCount: 1))
     }
     
     // MARK: - Notification

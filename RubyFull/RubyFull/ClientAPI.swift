@@ -10,6 +10,10 @@ import Foundation
 import APIKit
 import Himotoki
 
+enum HiraganaError: Error {
+    case badRequest
+}
+
 struct HiraganaResponse : Decodable {
     let hiragana: String
     static func decode(_ e: Extractor) throws -> HiraganaResponse {
@@ -32,7 +36,10 @@ struct HiraganaRequest: Request {
     }
     
     func response(from object: Any, urlResponse: HTTPURLResponse) throws -> HiraganaResponse {
-        return try HiraganaResponse.decodeValue(object)
+        if urlResponse.statusCode == 200{
+            return try HiraganaResponse.decodeValue(object)
+        }
+        throw HiraganaError.badRequest
     }
     
     var method: HTTPMethod {
