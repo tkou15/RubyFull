@@ -13,31 +13,32 @@ import APIKit
 
 class ViewController: UIViewController {
     
+    
+    ///
     @IBOutlet weak var titleLabel: UILabel!
+    
+    /// カードView
     @IBOutlet weak var cardView: AnimatableView!
+    /// 入力テキストフィールド
     @IBOutlet weak var inputTextField: AnimatableTextField!
+    /// 入力された文字列の表示ラベル
     @IBOutlet weak var inputStringLabel: UILabel!
+    /// ひらがな変換後の文字列表示ラベル
     @IBOutlet weak var hiraganaLabel: UILabel!
+    /// 結果表示View
     @IBOutlet weak var resultStackView: UIStackView!
+    /// インジケーター
     @IBOutlet weak var inidicator: AnimatableActivityIndicatorView!
-    
-    var alertController: UIAlertController!
-    
+    /// 入力文字列の保存する変数
     private var inputString = ""
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
 
+        // Viewmの初期化
         self.view.backgroundColor = UIColor.mainColor
         self.resultStackView.isHidden = true
-        
-        // インジケーターのs初期化
-        self.inidicator.animationType = .ballSpinFadeLoader
-        self.inidicator.stopAnimating()
-        
-        cardView.animate(.slideFade(way: .in, direction: .up), duration: 1, damping: 1, velocity: 2, force: 1)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -45,11 +46,18 @@ class ViewController: UIViewController {
         self.notificationObserver()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        // インジケーターの初期化
+        self.inidicator.animationType = .ballSpinFadeLoader
+        self.inidicator.stopAnimating()
+        // アニメーション
+        cardView.animate(.slideFade(way: .in, direction: .up), duration: 1, damping: 1, velocity: 2, force: 1)
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         self.view.endEditing(true)
     }
-    
     
     
     @IBAction func action(_ sender: Any) {
@@ -72,8 +80,7 @@ class ViewController: UIViewController {
                 case .success(let response):
                     self.displaySuccess(hiragana: response.hiragana)
                     self.inidicator.stopAnimating()
-                case .failure(let error):
-                    print(error)
+                case .failure:
                     self.inidicator.stopAnimating()
                 }
             }
@@ -98,6 +105,7 @@ class ViewController: UIViewController {
     }
     
     private func displayError(errorTitle: String){
+        // エラーを表示する
         self.resultStackView.isHidden = true
         self.titleLabel.text = errorTitle
         self.titleLabel.textColor = .red
