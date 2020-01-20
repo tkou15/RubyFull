@@ -60,8 +60,6 @@ struct ValidationContainer<Target, Invalid: InvalidStatus> {
     }
 
     func guarantee(_ condition: (Target) -> Bool, otherwise invalidStatus: Invalid) -> Self {
-
-        // If the container already has an invalid status, skip the condition check.
         guard invalid == nil else {
             return self
         }
