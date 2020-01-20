@@ -11,7 +11,7 @@ import Combine
 import IBAnimatable
 import APIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
     
     
     ///
