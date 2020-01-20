@@ -15,6 +15,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="bt4-q3-3lM">
+                                <rect key="frame" x="79" y="152" width="256" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="256" id="JV0-Tm-pEj"/>
+                                    <constraint firstAttribute="height" constant="128" id="VSh-QY-Tff"/>
+                                </constraints>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zmk-jk-v8N" customClass="AnimatableView" customModule="IBAnimatable">
                                 <rect key="frame" x="12" y="288.5" width="390" height="319"/>
                                 <subviews>
@@ -141,13 +148,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="bt4-q3-3lM">
-                                <rect key="frame" x="79" y="152" width="256" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="256" id="JV0-Tm-pEj"/>
-                                    <constraint firstAttribute="height" constant="128" id="VSh-QY-Tff"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.32156862745098036" blue="0.32156862745098036" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
