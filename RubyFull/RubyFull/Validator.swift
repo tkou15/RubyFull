@@ -19,7 +19,7 @@ enum InvalidID: InvalidStatus {
 
 
 extension InvalidID {
-    var alertTitle: String{
+    var errorTitle: String{
         switch self {
         case .empty:
             return "文字列を入力してください"

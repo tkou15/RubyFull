@@ -168,6 +168,7 @@
                         <outlet property="inputStringLabel" destination="cUo-MY-KUa" id="wI8-fJ-wlh"/>
                         <outlet property="inputTextField" destination="sxr-17-wl7" id="55r-FV-Kga"/>
                         <outlet property="resultStackView" destination="SqX-QR-i3F" id="5fn-8X-o5r"/>
+                        <outlet property="titleLabel" destination="qHP-Tn-7ZC" id="ZI3-1m-Kym"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
