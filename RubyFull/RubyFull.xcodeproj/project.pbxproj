@@ -102,7 +102,7 @@
 				B327AC5323D60569008E8F32 /* Request */,
 				B327AC5923D605D6008E8F32 /* HiraganaError.swift */,
 			);
-			name = API;
+			path = API;
 			sourceTree = "<group>";
 		};
 		B327AC5323D60569008E8F32 /* Request */ = {
@@ -118,7 +118,7 @@
 			children = (
 				B327AC5723D605AF008E8F32 /* HiraganaResponse.swift */,
 			);
-			name = Response;
+			path = Response;
 			sourceTree = "<group>";
 		};
 		F12E3D76DE8B4A2AD722DC2C /* Pods */ = {
