@@ -1,6 +1,0 @@
-framework module Pods_RubyFull {
-  umbrella header "Pods-RubyFull-umbrella.h"
-
-  export *
-  module * { export * }
-}
