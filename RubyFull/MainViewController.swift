@@ -35,7 +35,9 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-
+        
+        self.notificationObserver()
+        
         // Viewmの初期化
         self.view.backgroundColor = UIColor.mainColor
         self.resultStackView.isHidden = true
@@ -43,7 +45,6 @@ class MainViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.notificationObserver()
     }
     
     override func viewDidAppear(_ animated: Bool) {
